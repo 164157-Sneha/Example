@@ -1,0 +1,69 @@
+Issue must be assigned automatically when the practice is selected.
+Give the status name for the transition.
+Board filters
+
+
+project manager should not be able to edit status once the issue is created.---done
+Summary field...how to remove it as it is mandatory/ concatenate both the EmpID and Empname----done
+Validation for empID and Empname-----special character validation----done
+P1 left side options for reason for release-----done
+None field...dropdown for radio buttons-----done
+Location-->Emp location and validate it with only one location----done
+Add A1 and A2 grade level---done
+create your own scheme---done
+remove project manager---done
+find out the practices----done
+Based on the practice we have to send the mail to the particular team.---done
+capacity and capability cannot be able to create issues.----done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def issueKey = issue.key
+String newSummary="" 
+String value1
+String value2;
+
+
+
+
+ 
+
+def customFieldName = 'customfield_10027'
+def customFieldName1='customfield_10026'
+def resulta = get("/rest/api/2/issue/${issueKey}?fields=${customFieldName}")
+        .header('Content-Type', 'application/json')
+        .asObject(Map)
+
+ def resultb = get("/rest/api/2/issue/${issueKey}?fields=${customFieldName1}")
+        .header('Content-Type', 'application/json')
+        .asObject(Map)
+value1=resulta.body.fields[customFieldName]
+value2=resultb.body.fields[customFieldName1]
+
+newSummary=value1+value2
+
+
+
+
+def result1 = put("/rest/api/2/issue/${issueKey}")
+        .header('Content-Type', 'application/json')
+        .body([
+                fields: [
+                        summary: newSummary
+                ]
+        ])
+        .asString()
+

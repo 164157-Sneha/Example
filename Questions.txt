@@ -1,0 +1,3 @@
+Can we assign issue for a group?------not possible
+How will the assigne be assigned automatically based on the practice when the issue is created?
+Can we disable a particular custom field after creating an issue?

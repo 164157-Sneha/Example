@@ -1,0 +1,4 @@
+https://community.atlassian.com/t5/Jira-Software-questions/Filter-board-by-assignee-current-user/qaq-p/828308
+https://confluence.atlassian.com/adminjiracloud/creating-issues-and-comments-from-email-779288896.html----issue from mail
+https://confluence.atlassian.com/display/JIRA052/How+to+Remove+%27NONE%27+from+a+Select+List+Custom+Field----None field
+https://confluence.atlassian.com/jirakb/how-to-only-allow-certain-fields-to-be-editable-depending-on-status-729482680.html----permissions 

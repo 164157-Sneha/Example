@@ -1,0 +1,18 @@
+    if(practiceName.equals("DAC")){
+       
+def resp = post("/rest/api/2/issue/${issueKey}/notify")
+        .header("Content-Type", "application/json")
+        .body([
+        subject: 'Mail title',
+        textBody: "Body",
+        htmlBody: "<p>Body</p>",
+        to: [
+                
+                groups: [[
+                    name: 'DAC Capacity'
+                ]]
+        ]
+])
+        .asString()
+        
+    } 

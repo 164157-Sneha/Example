@@ -1,0 +1,3 @@
+To send mails for a particular group write 2 get functions and 7 post functions 
+or
+If there is a group picker in screen instead of assigne then 3 get functions and 1 post function can be used. 

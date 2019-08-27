@@ -1,0 +1,15 @@
+import com.atlassian.jira.issue.IssueManager;
+import com.atlassian.jira.issue.MutableIsuue;
+import com.atlassian.jira.component.ComponentAccessor;
+import com.atlassian.jira.user.ApplicationUser;
+import com.atlassian.jira.issue.IssueInputParametersImpl;
+import com.atlassian.jira.bc.issue.IssueService;
+import com.atlassian.jira.workflow.JiraWorkflow;
+import com.atlassian.jira.workflow.WorkflowManager;
+
+ApplicationUser currentUser = ComponentAccessor.getJiraAuthenticationContext().loggedInUser
+
+IssueManager im = ComponentAccessor.getIssueManager();
+MutableIssue issue = im.getIssueObject("TEDP-71");
+
+return issue;
